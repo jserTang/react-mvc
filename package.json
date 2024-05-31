@@ -1,0 +1,60 @@
+{
+  "name": "@jser-tang/react-mvc",
+  "version": "1.0.0",
+  "description": "A powerful tool for simplifying React state and behavior management.",
+  "main": "./dist/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "start": "npx webpack serve --node-env=development --progress --config ./webpack.config.js",
+    "build:watch": "npx webpack --watch --node-env=production --progress --config ./webpack.config.js",
+    "build": "npx webpack --node-env=production --progress --config ./webpack.config.js && tsc --emitDeclarationOnly && npm link",
+    "pub": "npm run build && npm publish --access public"
+  },
+  "devDependencies": {
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "postcss-loader": "^7.3.3",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
+    "@types/node": "16.18.0",
+    "css-loader": "^6.8.1",
+    "hoist-non-react-statics": "3.3.2",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "react-refresh": "^0.14.0",
+    "sass": "1.66.1",
+    "sass-loader": "13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "tslint": "^6.1.3",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jserTang/react-mvc.git"
+  },
+  "keywords": [
+    "react",
+    "mvc"
+  ],
+  "author": "jserTang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jserTang/react-mvc/issues"
+  },
+  "homepage": "https://github.com/jserTang/react-mvc#readme"
+}
