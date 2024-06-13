@@ -82,7 +82,7 @@ const App = () => {
 ```jsx
 import { withCtrl } from './controller';
 
-export const OnliveTipWrap = withCtrl((props) => {
+export const ChildComponent = withCtrl((props) => {
     const { $ctrl: {data, addCount} } = props;
     return (
         <div>
