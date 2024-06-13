@@ -1,6 +1,6 @@
 {
   "name": "@jser-tang/react-mvc",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "A powerful tool for simplifying React state and behavior management.",
   "main": "./dist/index.js",
   "types": "./dist/src/index.d.ts",

@@ -28,7 +28,7 @@ npm i @jser-tang/react-mvc
 ```
 
 ## API
-- ***CourseHomeController(key: string; ctrl: IExtendsCtrl)***
+- ***AppController(key: string; ctrl: IExtendsCtrl)***
 > Create a controller instance where you can manage your store, declaration cycle, and methods
 
 - ***withCtrl(conponent: React.FunctionComponent; )***
@@ -39,7 +39,7 @@ npm i @jser-tang/react-mvc
 ```jsx
 import { createController } from '@jser-tang/react-mvc';
 
-const { Controller: CourseHomeController, withCtrl } = createController<IHomeProps>('courseHome', {
+const { Controller, withCtrl } = createController<IHomeProps>('appHome', {
     async init() {
         // The init method is called when the instance is created, where some initialization operations can be done, such as requesting and updating data
         const initBData = await fetch('xxxxx');
@@ -55,13 +55,13 @@ const { Controller: CourseHomeController, withCtrl } = createController<IHomePro
     }
 });
 
-export { CourseHomeController, withCtrl };
+export { AppController: Controller, withCtrl };
 ```
 
 ***app.jsx***
 ```jsx
 import { ChildComponent } from './childComponent';
-import { CourseHomeController } from './controller';
+import { AppController } from './controller';
 
 const App = () => {
     const initData = {
@@ -71,9 +71,9 @@ const App = () => {
         }
     };
     return (
-        <CourseHomeController store={props}>
+        <AppController store={props}>
             <ChildComponent />
-        </CourseHomeController>
+        </AppController>
     );
 };
 ```
